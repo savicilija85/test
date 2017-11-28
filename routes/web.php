@@ -26,4 +26,4 @@ Route::post('admin', 'Admin\LoginController@login');
 Route::post('admin-password/email', 'Admin\ForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
 Route::get('admin-password/reset', 'Admin\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
 Route::post('admin-password/reset', 'Admin\ResetPasswordController@reset');
-Route::get('admin-password/reset/{token}', 'Admin\ResetPasswordController@reset')->name('admin.password.reset');
+Route::get('admin-password/reset/{token}', 'Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
